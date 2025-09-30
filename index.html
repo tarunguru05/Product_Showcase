@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ShopEase</title>
+		
+		<!-- Bootstrap 5 CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+		<!-- Top Navbar -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+			<div class="container">
+				<a class="navbar-brand fw-bold text-primary" href="index.html">ShopEase</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarContent">
+					<form class="d-flex mx-auto w-50">
+						<input class="form-control me-2" type="search" placeholder="Search for products, brands and more">
+						<button class="btn btn-primary" type="submit">Search</button>
+					</form>
+					<ul class="navbar-nav ms-auto align-items-center">
+						<li class="nav-item me-3">
+							<a class="nav-link position-relative" href="cart.html">
+								<i class="bi bi-cart3 fs-4"></i>
+								<span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle">0</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="btn btn-outline-primary" href="#">Login</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<!-- Category Menu -->
+		<div class="container my-4">
+			<div class="row">
+				<div class="col-12">
+					<div class="d-flex overflow-auto category-menu mb-4">
+						<button class="btn btn-outline-primary me-2 active" data-category="all">All</button>
+						<button class="btn btn-outline-primary me-2" data-category="clothing">Clothing</button>
+						<button class="btn btn-outline-primary me-2" data-category="electronics">Electronics</button>
+						<button class="btn btn-outline-primary me-2" data-category="accessories">Accessories</button>
+						<button class="btn btn-outline-primary me-2" data-category="home">Home & Kitchen</button>
+						<button class="btn btn-outline-primary me-2" data-category="Computers">Computers</button>
+						<button class="btn btn-outline-primary me-2" data-category="mobiles">Mobiles</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Product Grid -->
+		<main class="container mb-5">
+			<div class="row g-4" id="productGallery">
+				<!-- Example Product Card -->
+				<div class="col-6 col-md-4 col-lg-3 product" data-category="clothing">
+					<div class="card product-card h-100 shadow-sm">
+						<img src="images/tshirt.jpg" class="card-img-top" alt="Classic T-Shirt">
+						<div class="card-body">
+							<h6 class="card-title fw-bold">Classic T-Shirt</h6>
+							<div class="rating mb-2">
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star"></i>
+							</div>
+							<p class="price mb-2">₹499 <span class="text-muted text-decoration-line-through">₹699</span></p>
+							<div class="d-flex gap-2">
+								<button class="btn btn-primary w-50 add-cart-btn">Add to Cart</button>
+								<button class="btn btn-outline-secondary w-50 quick-view-btn"
+									data-title="Classic T-Shirt"
+									data-price="₹499"
+									data-original-price="₹699"
+									data-rating="⭐⭐⭐⭐☆"
+									data-images="images/tshirt1.jpg,images/tshirt2.jpg,images/tshirt3.jpg,images/tshirt4.jpg,images/tshirt5.jpg"
+									data-description="High quality cotton t-shirt available in multiple colors."
+									data-specs="100% Cotton, Machine Washable, Regular Fit"
+									data-reviews="Good quality.|Comfortable fit.|Value for money.">
+									Quick View
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-6 col-md-4 col-lg-3 product" data-category="electronics">
+					<div class="card product-card h-100 shadow-sm">
+						<img src="images/headphone.jpg" class="card-img-top" alt="Wireless Headphones">
+						<div class="card-body">
+							<h6 class="card-title fw-bold">Wireless Headphones</h6>
+							<div class="rating mb-2">
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star"></i>
+								<i class="bi bi-star fs-6 star"></i>
+							</div>
+							<p class="price mb-2">₹2,499 <span class="text-muted text-decoration-line-through">₹3,199</span></p>
+							<div class="d-flex gap-2">
+								<button class="btn btn-primary w-50 add-cart-btn">Add to Cart</button>
+								<button class="btn btn-outline-secondary w-50 quick-view-btn"
+									data-title="Wireless Headphones"
+									data-price="₹2,499"
+									data-original-price="₹3,199"
+									data-rating="⭐⭐⭐☆☆"
+									data-images="images/headphone1.jpg,images/headphone2.jpg,images/headphone3.jpg,images/headphone4.jpg,images/headphone5.jpg"
+									data-description="Sony’s lightest Wireless Noise-cancelling headband ever. Up to 50-hour battery life with quick charging (3 min charge for up to 1 hour of playback). Multi-Point Connection helps to pair with two Bluetooth devices at the same time. Take noise cancelling to the next level with Sony’s Integrated Processor V1,so you can fully immerse yourself in the music."
+									data-specs="Brand Name: Sony, Model Number: WHCH720N/B, Model Name: WH-CH720N, Box Contents: Headphone Connection Cable; USB Type-C cable; Reference Guide; 1U Headphone, Age Range Description: Adult"
+									data-reviews="I'm absolutely loving my Sony WH-CH720N headphones! The sound quality is top-notch - the bass is rich and punchy, and the highs are clear and crisp. The noise cancellation is also amazing, it really helps me focus when I'm working or studying.|The Sony WH‑CH720N delivers impressive noise cancellation, lively sound, and user-friendly features in a very affordable package. Outstanding comfort and long battery life make it a smart choice for everyday users and budget-conscious listeners who still want strong ANC and adaptability.|They sound good overall, the noise cancelation works for me, it's better if u download the app to control the equalizer too, nice quality :)">
+									Quick View
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			
+				<!--Accessories-->
+				<div class="col-6 col-md-4 col-lg-3 product" data-category="accessories">
+					<div class="card product-card h-100 shadow-sm">
+						<img src="images/accmain.jpg" class="card-img-top" alt="Wrist Chain Hand">
+						<div class="card-body">
+							<h6 class="card-title fw-bold">Black Wrist Chain Hand</h6>
+							<div class="rating mb-2">
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star"></i>
+								<i class="bi bi-star fs-6 star"></i>
+							</div>
+							<p class="price mb-2">₹165 <span class="text-muted text-decoration-line-through">₹1,299</span></p>
+							<div class="d-flex gap-2">
+								<button class="btn btn-primary w-50 add-cart-btn">Add to Cart</button>
+								<button class="btn btn-outline-secondary w-50 quick-view-btn"
+									data-title="Wireless Headphones"
+									data-price="₹165"
+									data-original-price="₹1,299"
+									data-rating="⭐⭐⭐☆☆"
+									data-images="images/acc1.jpg,images/acc2.jpg,images/acc3.jpg,images/acc4.jpg,images/acc5.jpg"
+									data-description="Stylish Silver Black Wrist Chain Hand Band Bracelet Accessory For Men Boys (Easy Fitting)| Special Birthday Gift For Boyfriend, Brother, Father, Men, Boys."
+									data-specs="Jewellery Information
+												Brand:	Manocarter
+												Clasp:	Lobster Claw
+												Chain:	Cuban,Curb
+												Stone:	No Gemstone
+												Material: Stainless Steel, Alloy Steel, Silver
+												Stainless Steel
+												Metal:	Stainless Steel
+												Metal stamp: No Metal Stamp
+												Metal Weight:	50 g
+												No Gemstone
+												Stone Shape: Rectangular
+												Stone Colour:	Silver
+												Stone Cut:	Excellent"
+									data-reviews="PREMIUM CONSTRUCTION: Crafted from high-quality stainless steel and alloy steel with sleek black and silver finish, ensuring lasting durability and sophisticated style.
+									VERSATILE DESIGN: Contemporary Cuban curb chain hand bracelet design for boys and men complements both formal and ethnic wear, making it perfect for any occasion.
+									PERFECT FIT: 21-centimetre length with secure lobster claw clasp ensures this hand bracelet is comfortable for daily wear, suitable for most wrist sizes.
+									DURABLE FEATURES: Waterproof construction maintains appearance during regular use, with substantial 50 grams weight for sturdy wear.
+									GIFT-READY: Arrives in premium packaging, ideal for special occasions like Valentine's Day, birthdays, weddings, and anniversaries. Also a great option as a Gift for Boyfriend,Brother, Men, Boys or Father.)">
+									Quick View
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!-- HOME AND KITCHEN -->
+				<div class="col-6 col-md-4 col-lg-3 product" data-category="home">
+					<div class="card product-card h-100 shadow-sm">
+						<img src="images/hkmain.jpg" class="card-img-top" alt="Electric Kettle">
+						<div class="card-body">
+							<h6 class="card-title fw-bold">Tainless Steel Electric Kettle</h6>
+							<div class="rating mb-2">
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star filled"></i>
+								<i class="bi bi-star fs-6 star"></i>
+								<i class="bi bi-star fs-6 star"></i>
+							</div>
+							<p class="price mb-2">₹165 <span class="text-muted text-decoration-line-through">₹1,299</span></p>
+							<div class="d-flex gap-2">
+								<button class="btn btn-primary w-50 add-cart-btn">Add to Cart</button>
+								<button class="btn btn-outline-secondary w-50 quick-view-btn"
+									data-title="Wireless Headphones"
+									data-price="₹649"
+									data-original-price="₹1,445"
+									data-rating="⭐⭐⭐☆☆"
+									data-images="images/hk1.jpg,images/hk2.jpg,images/hk3.jpg,images/hk4.jpg,images/hk5.jpg"
+									data-description="Prestige 1.5 litre PKOSS Stainless Steel Electric Kettle | 1350 Watts| Elegant Design | Cool-touch Handle and Lid | Automatic Cut-Off and Single-Touch Lid Locking. | Silver"
+									data-specs="Brand: Prestige
+												Colour:	Black
+												Special Feature:	Rotatable Base
+												Package Information:	Kettle
+												Finish Type:	Steel
+												Product Dimensions:	19L x 19W x 24H Centimeters
+												Included Components	Electric kettle with concealed element and Detachable power base
+												Product Care Instructions:	Yes
+												Recommended Uses For Product:	Boiling, Heating
+												Country/Region Of Origin:	India"
+									data-reviews="Customers find the electric kettle easy to use and appreciate its quick water heating capability, with water boiling in 2 minutes. Moreover, they consider it worth the price. However, the product receives mixed feedback about its quality and functionality, with several customers reporting that it stopped working completely. Additionally, the cord length is criticized as being too short, and the switch functionality is problematic, with multiple customers noting that the on/off switch stops working. Moreover, durability is a concern, with customers reporting that the kettle handle breaks within a month of usage.)">
+
+																															
+									Quick View
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  Add more products as needed  -->
+			</div>
+		</main>
+		
+		<!-- Quick View Modal -->
+		<div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalTitle">Product Title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body row">
+						
+						<!-- Left: Image Carousel -->
+						<div class="col-md-6">
+							<div class="main-img-container mb-3">
+								<img id="modalMainImg" src="" alt="" class="img-fluid main-img">
+							</div>
+							<div id="modalThumbnails" class="d-flex gap-2">
+								<!-- Thumbnails injected dynamically -->
+							</div>
+						</div>
+						
+						<!-- Right: Product Info & Tabs -->
+						<div class="col-md-6">
+							<div class="modal-rating mb-2" id="modalRating"></div>
+							<p class="fs-4 fw-bold text-primary" id="modalPrice">₹499</p>
+							<p class="text-muted text-decoration-line-through" id="modalOriginalPrice">₹699</p>
+							<button class="btn btn-primary w-100 mb-3 add-cart-btn">Add to Cart</button>
+							<!-- Tabs -->
+							<ul class="nav nav-tabs" id="productTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">Description</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button" role="tab">Specifications</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reviews</button>
+								</li>
+							</ul>
+							<div class="tab-content mt-3" id="productTabContent">
+								<div class="tab-pane fade show active" id="description" role="tabpanel">
+									<p id="modalDescription"></p>
+								</div>
+								<div class="tab-pane fade" id="specs" role="tabpanel">
+									<ul id="modalSpecs"></ul>
+								</div>
+								<div class="tab-pane fade" id="reviews" role="tabpanel">
+									<ul id="modalReviews"></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Footer Section -->
+		<footer class="footer bg-dark text-light pt-5 mt-auto">
+			<div class="container">
+				<div class="row">
+					
+					<!-- Column 1: Contact -->
+					<div class="col-md-3 mb-4">
+						<a class="navbar-brand fw-bold text-primary mb-3" href="index.html">ShopEase</a>
+						<h5>Contact</h5>
+						<p><strong>Address:</strong> Jamshedpur Co-operative College, Jamshedpur, Jharkhand, India</p>
+						<p><strong>Phone:</strong> +91 6299684817</p>
+						<p><strong>Hours:</strong> 10:00-18:00 Mon-Sat</p>
+						<div class="follow mt-3">
+							<h5>Follow Us</h5>
+							<div class="d-flex gap-2 social-icons">
+								<a href="#"><i class="bi bi-facebook"></i></a>
+								<a href="#"><i class="bi bi-twitter-x"></i></a>
+								<a href="#"><i class="bi bi-instagram"></i></a>
+								<a href="#"><i class="bi bi-pinterest"></i></a>
+								<a href="#"><i class="bi bi-youtube"></i></a>
+								<a href="#"><i class="bi bi-linkedin"></i></a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Column 2: About -->
+					<div class="col-md-2 mb-4">
+						<h5>About</h5>
+						<ul class="list-unstyled footer-links">
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="#">Delivery Information</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
+						</ul>
+					</div>
+					
+					<!-- Column 3: My Account -->
+					<div class="col-md-2 mb-4">
+						<h5>My Account</h5>
+						<ul class="list-unstyled footer-links">
+							<li><a href="#">Sign In</a></li>
+							<li><a href="cart.html">View Cart</a></li>
+							<li><a href="#">My Wishlist</a></li>
+							<li><a href="#">Track My Order</a></li>
+							<li><a href="#">Help</a></li>
+						</ul>
+					</div>
+					
+					<!-- Column 4: App & Payment -->
+					<div class="col-md-5 mb-4">
+						<h5>Install App</h5>
+						<p>From App Store or Google Play</p>
+						<div class="d-flex gap-2 mb-3 app-images">
+							<img src="images/AppStore.png" alt="App Store" width="120px">
+							<img src="images/PlayStore.png" alt="Google Play" width="120px">
+						</div>
+						<p>Secured Payment Gateways</p>
+						<img src="images/SecuredPaymentGateways.png" alt="Payment Gateways" width="250px">
+					</div>
+				</div>
+				<hr class="bg-light">
+				<div class="text-center py-3">
+					<span>&copy; 2025 ShopEase. All rights reserved. | Developed by Tarun Guru</span>
+				</div>
+			</div>
+		</footer>
+		
+		<!-- Bootstrap JS Bundle -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- Custom JS -->
+		<script src="script.js"></script>
+	</body>
+</html>
